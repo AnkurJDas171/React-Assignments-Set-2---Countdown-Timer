@@ -8,8 +8,10 @@ const App = () => {
   const handelKeyDown = (event) => {
     let value = parseInt(event.target.value);
     console.log(value);
-    if (event.keyCode === 13 && !isNaN(value)) {
-      setRemainingTime(value);
+    if (event.keyCode === 13) {
+      if (!isNaN(value)) {
+        setRemainingTime(value);
+      } else setRemainingTime(0);
     }
   };
 
