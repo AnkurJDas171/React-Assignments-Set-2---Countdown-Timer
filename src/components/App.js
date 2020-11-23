@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     let timer = setInterval(() => {
-      if (remainingTime) {
+      if (remainingTime && remainingTime > 0) {
         let reduceTime = remainingTime - 1;
         setRemainingTime(reduceTime);
       }
