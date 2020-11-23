@@ -6,10 +6,10 @@ const App = () => {
   const [remainingTime, setRemainingTime] = useState();
 
   const handelKeyDown = (event) => {
-    let value = parseInt(event.target.value);
+    let value = event.target.value;
     console.log(value);
     if (event.keyCode === 13) {
-      if (!isNaN(value)) {
+      if (!isNaN(value) && parseInt(value)>=0) {
         setRemainingTime(value);
       } else setRemainingTime(0);
     }
